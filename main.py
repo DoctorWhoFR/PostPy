@@ -15,14 +15,13 @@ with open(postman_file) as json_file:
     mdFile.new_line('****')
 
     for route in data['item']:        
-        mdFile.insert_code("+ "+route['request']['method'], language='diff')
-        mdFile.new_header(level=3, title=route['name'])
+        mdFile.insert_code("+ "+route['request']['method'] + " " + route['name'], language='diff')
         mdFile.new_paragraph(route['request']['description'])
 
         try:
             mdFile.new_header(level=2, title="Headers:")
             for header in route['request']['header']:
-                mdFile.new_paragraph("Key: " + header['key'] + "\n" + "Value: " + header['value'])
+                mdFile.new_paragraph(">Key: " + header['key'] + "\n" + "| " + header['value'])
         except(KeyError):
             print('[PostPY] '+ route['info']['name'] + ' No header found')
 

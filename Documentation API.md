@@ -9,23 +9,21 @@ teztteztze
 ****
 
 ```diff
-+ POST
++ POST Create a new Project
 ```
-### Create a new Project
-
 
 This api route is used to create new project.
 ## Headers:
 
 
-Key: Content
-Value: application/json
+>Key: Content
+| application/json
 
-Key: Content-Type
-Value: application/x-www-form-urlencoded
+>Key: Content-Type
+| application/x-www-form-urlencoded
 
-Key: Authorization
-Value: {{Authorization}}
+>Key: Authorization
+| {{Authorization}}
 ## [urlencoded] Body:
 
 ### title *text*
@@ -47,68 +45,60 @@ Le prix voulu
 ****
 
 ```diff
-+ GET
++ GET Get all projects
 ```
-### Get all projects
-
 
 The api route for getting all projects (expect lag with big database [use projets/<page>] instead.)
 ## Headers:
 
 
-Key: Authorization
-Value: {{Authorization}}  
+>Key: Authorization
+| {{Authorization}}  
 ****
 
 ```diff
-+ GET
++ GET Get projets with pagination
 ```
-### Get projets with pagination
-
 
 Get projets per page of 20 items.
 ## Headers:
 
 
-Key: Content
-Value: application/json
+>Key: Content
+| application/json
 
-Key: Authorization
-Value: {{Authorization}}
+>Key: Authorization
+| {{Authorization}}
 
-Key: Content-Type
-Value: {{Authorization}}  
+>Key: Content-Type
+| {{Authorization}}  
 ****
 
 ```diff
-+ GET
++ GET Get Projet
 ```
-### Get Projet
-
 
 Get the data of an project with is id.
 ## Headers:
 
 
-Key: Authorization
-Value: {{Authorization}}  
+>Key: Authorization
+| {{Authorization}}  
 ****
 
 ```diff
-+ POST
++ POST Auth login
 ```
-### Auth login
-
 
 Login to our api system for another request
 ## Headers:
 
 
-Key: Content-Type
-Value: application/x-www-form-urlencoded
+>Key: Content-Type
+| application/x-www-form-urlencoded
 
-Key: Authorization
-Value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzU1NDQ5MjQsInVzZXIiOnsiaWQiOjEsInVzZXJuYW1lIjoidGVzdCIsInBhc3N3b3JkIjoidGVzdCJ9fQ.XMIJ2sRXHGO_rVfkBUz1nm4Z9gM0aT_jCepr0xXh91I
+>Key: Authorization
+| eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzU1NDQ5MjQsInVzZXIiOnsiaWQiOjEsInVzZXJuYW1lIjoidGVzdCIsInBhc3N3b3JkIjoidGVzdCJ9fQ.XMIJ2sRXHGO_rVfkBUz1nm4Z9gM0aT_jCepr0xXh91I
 ## [urlencoded] Body:
 
 ### username *text*
